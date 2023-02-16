@@ -1,0 +1,363 @@
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects
+$ git init
+Initialized empty Git repository in E:/MyGitProjects/.git/
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ ls
+index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git add index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git add --all
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   bluestyle.css
+        new file:   index.html
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git commit -m "My first release of Hello World project"
+[master (root-commit) dbe56ce] My first release of Hello World project
+ 3 files changed, 24 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 bluestyle.css
+ create mode 100644 index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status --short
+ M index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git commit -a -m "updated index.html added a new line"
+[master 226f532] updated index.html added a new line
+ 1 file changed, 1 insertion(+)
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git log
+commit 226f5323751b2faa708ec79a6b65e342c19bad77 (HEAD -> master)
+Author: nrt-rupesh <nrt.rupesh@gmail.com>
+Date:   Thu Feb 16 15:16:56 2023 +0530
+
+    updated index.html added a new line
+
+commit dbe56ce51387ac449416280ad113625c31883e2c
+Author: nrt-rupesh <nrt.rupesh@gmail.com>
+Date:   Thu Feb 16 13:48:39 2023 +0530
+
+    My first release of Hello World project
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status -short
+error: did you mean `--short` (with two dashes)?
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status --short
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch hello-world-images
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch
+  hello-world-images
+* master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git checkout hello-world-images
+Switched to branch 'hello-world-images'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git branch
+* hello-world-images
+  master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git status
+On branch hello-world-images
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pngimg.com - github_PNG60.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git status --short
+ M index.html
+?? "pngimg.com - github_PNG60.png"
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git add --all
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git status
+On branch hello-world-images
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        new file:   pngimg.com - github_PNG60.png
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git commit -m "Image added to index.html"
+[hello-world-images 03905c9] Image added to index.html
+ 2 files changed, 2 insertions(+)
+ create mode 100644 pngimg.com - github_PNG60.png
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ ls
+ README.md   bluestyle.css   index.html  'pngimg.com - github_PNG60.png'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git checkout master
+Switched to branch 'master'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch
+  hello-world-images
+* master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ ls
+README.md  bluestyle.css  index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git branch
+* emergency-fix
+  hello-world-images
+  master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git status
+On branch emergency-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git add index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git commit -m "update index.html with emergency fix"
+[emergency-fix c9bc485] update index.html with emergency fix
+ 1 file changed, 1 insertion(+)
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git checkout master
+Switched to branch 'master'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git checkout emergency-fix
+Switched to branch 'emergency-fix'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ ls
+README.md  bluestyle.css  index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git checkout hello-world-images
+Switched to branch 'hello-world-images'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ ls
+ README.md   bluestyle.css   index.html  'pngimg.com - github_PNG60.png'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git checkout emergency-fix
+Switched to branch 'emergency-fix'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ ls
+README.md  bluestyle.css  index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (emergency-fix)
+$ git checkout master
+Switched to branch 'master'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git merge emergency-fix
+Updating 226f532..c9bc485
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch -d emergency-fix
+Deleted branch emergency-fix (was c9bc485).
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch
+  hello-world-images
+* master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git checkout hello-world-images
+Switched to branch 'hello-world-images'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ ls
+ README.md   bluestyle.css   index.html  'pngimg.com - github_PNG60.png'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git status
+On branch hello-world-images
+nothing to commit, working tree clean
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git add -all
+error: did you mean `--all` (with two dashes)?
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git add --all
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git commit -m "added new image where emergency-fix changed on that line"
+[hello-world-images 188d30c] added new image where emergency-fix changed on that line
+ 2 files changed, 1 insertion(+)
+ create mode 100644 photo-1618401471353-b98afee0b2eb.jpg
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (hello-world-images)
+$ git checkout master
+Switched to branch 'master'
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ ls
+README.md  bluestyle.css  index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git merge hello-world-images
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   photo-1618401471353-b98afee0b2eb.jpg
+        new file:   pngimg.com - github_PNG60.png
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master|MERGING)
+$ git add index.html
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.html
+        new file:   photo-1618401471353-b98afee0b2eb.jpg
+        new file:   pngimg.com - github_PNG60.png
+
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master|MERGING)
+$ git commit -m "merged with hello-world-images after fixing conflicts"
+[master 6d6a9c5] merged with hello-world-images after fixing conflicts
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch -d hello-world-images
+Deleted branch hello-world-images (was 188d30c).
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$ git branch
+* master
+
+Rupesh@DESKTOP-QR4BSPB MINGW64 /e/MyGitProjects (master)
+$
